@@ -1,7 +1,7 @@
 # HijackScan
 白文件扫描器 非公开
 
-windows pe 白文件利用扫描器 版本 1.0 
+windows pe 白文件利用扫描器 版本 1.1
 
 # 扫描支持：
 
@@ -13,7 +13,7 @@ windows pe 白文件利用扫描器 版本 1.0
 
 支持等待进程时间
 
-只扫描具有签名的PE程序          （写死的）
+支持选择只扫描带签名的PE程序
 
 扫描会带有system目录可以用dll项 （写死的）
 
@@ -22,7 +22,7 @@ windows pe 白文件利用扫描器 版本 1.0
 -ui [ -ui cui    ]  cui or gui.            
 -ms [ -ms 100000 ]  file max size.         
 -wt [ -wt 5000   ]  wait for process time. 
- * -st [ -st        ]  file have signature.   
+-st [ -st        ]  file have signature.   
  * -sd [ -sd        ]  system dir dll.     
 
 # 注意事项：
@@ -34,3 +34,16 @@ windows pe 白文件利用扫描器 版本 1.0
  
  4 目录下的程序大部分情况是可以利用的，但并不是100%，需要最后人工审核
  
+# 更新日志：
+
+## v1.0 
+
+扫描  64 32 gui cui 带签名可被劫持的白文件。
+
+## v1.1 
+
+ 修复LoadLibraryExA flag 为 0x800时 仍然尝试创建劫持 （0x800 值load system目录 不能用于劫持）
+
+ 文件查询函数添加了更多判断，减少了无意义的尝试
+ 
+ X64 增加申请内存创建新的线程执行shellcode创建注册表 （X32 需要读取文件到内存）
