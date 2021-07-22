@@ -17,19 +17,19 @@ windows pe 白文件利用扫描器 版本 1.1
 
 扫描会带有system目录可以用dll项 （写死的）
 
--p  [ -p c:path  ]  scan path.     
+[ -p c:path  ]  scan path.     
 
--w  [ -w win64   ]  w32 or w64.            
+[ -w win64   ]  w32 or w64.            
 
--ui [ -ui cui    ]  cui or gui.          
+[ -ui cui    ]  cui or gui.          
 
--ms [ -ms 100000 ]  file max size.      
+[ -ms 100000 ]  file max size.      
 
--wt [ -wt 5000   ]  wait for process time. 
+[ -wt 5000   ]  wait for process time. 
 
--st [ -st        ]  file have signature.   
+[ -st        ]  file have signature.   
 
- * -sd [ -sd        ]  system dir dll.     
+ * [ -sd        ]  system dir dll.     
 
 # 注意事项：
  1 扫描时会将符合条件的程序添加到列表最后统一检测是否可能利用
