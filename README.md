@@ -9,19 +9,16 @@ windows pe 白文件利用扫描器 版本 1.3 (2020 07 26)
 
 help : This tool scans files that could be used for hijacking.
 
-[ -p  ]	scan path                   :	[ ]D:\\scan      
+| 选项     | 说明                     | 参数                                 |
+| -------- | ------------------------ | ------------------------------------ |
+| [ -p  ]  | scan path                | [ ] D:\\scan                         |
+| [ -w  ]  | scan software x86 or x64 | [ ] w32      [*] w64      [ ] w32w64 |
+| [ -ui ]  | scan software cui or gui | [ ] cui      [ ] gui      [*]cuigui  |
+| [ -st ]  | only scan signature      | [ ] on       [*] off                 |
+| [ -sd ]  | scan system dir dll      | [*] on       [ ] off                 |
+| [ -ms ]  | set scan file max size   | [*] ms < 100 ( Mb )                  |
+| [ -wt  ] | set wait for proc time   | [*] 5000< wt <1000000 ( ms )         |
 
-[ -w  ]	scan software x86 or x64    :	[ ]w32      [*]w64      [ ]w32w64	
-
-[ -ui ]	scan software cui or gui    :	[ ]cui      [ ]gui      [*]cuigui 	
-
-[ -st ]	only scan signature         :	[ ]on       [*]off     
-
-[ -sd ]	scan system dir dll         :	[*]on       [ ]off     
-
-[ -ms ]	set scan file max size      :	[*]10   ( Mb )					
-
-[ -wt ]	set wait for proc time      :	[*]5000 ( ms )     
 
  [*] Stands for default.
  
@@ -30,9 +27,9 @@ help : This tool scans files that could be used for hijacking.
    version 1.3
 
 # 注意事项：
- 1 扫描时会将符合条件的程序添加到列表最后统一检测是否可能利用
+ ~~1 扫描时会将符合条件的程序添加到列表最后统一检测是否可能利用~~
  
- 2 检测阶段部分程序会报错弹窗卡住进程，需要手动处理弹窗
+ ~~2 检测阶段部分程序会报错弹窗卡住进程，需要手动处理弹窗~~
  
  3 测试成功的程序会输出到当前success目录下
  
