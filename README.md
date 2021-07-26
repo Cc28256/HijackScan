@@ -5,28 +5,28 @@ windows pe 白文件利用扫描器 版本 1.3 (2020 07 26)
 
 # 扫描支持：
 
-支持x86 x64程序
-
-支持cui gui程序
-
-支持定义扫描文件的最大大小
-
-支持等待进程时间
-
-支持选择只扫描带签名的PE程序
-
-支持选择可与system目录dll同名
+支持x86 x64程序、支持cui gui程序、支持定义扫描文件的最大大小、支持等待进程时间、支持选择只扫描带签名的PE程序、支持选择可与system目录dll同名。
 
 help : This tool scans files that could be used for hijacking.
-[ -p  ]	scan path                   :	[ ]D:\\scan                         
+
+[ -p  ]	scan path                   :	[ ]D:\\scan      
+
 [ -w  ]	scan software x86 or x64    :	[ ]w32      [*]w64      [ ]w32w64	
+
 [ -ui ]	scan software cui or gui    :	[ ]cui      [ ]gui      [*]cuigui 	
-[ -st ]	only scan signature         :	[ ]on       [*]off                  
-[ -sd ]	scan system dir dll         :	[*]on       [ ]off                  
-[ -ms ]	set scan file max size      :	[*]10   ( Mb )						
-[ -wt ]	set wait for proc time      :	[*]5000 ( ms )                      
+
+[ -st ]	only scan signature         :	[ ]on       [*]off     
+
+[ -sd ]	scan system dir dll         :	[*]on       [ ]off     
+
+[ -ms ]	set scan file max size      :	[*]10   ( Mb )					
+
+[ -wt ]	set wait for proc time      :	[*]5000 ( ms )     
+
  [*] Stands for default.
+ 
    For example : -p d:\\scan -w w64 -ui cuigui -st on -sd on -ms 10 -wt 5000  
+   
    version 1.3
 
 # 注意事项：
