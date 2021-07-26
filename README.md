@@ -5,7 +5,7 @@ windows pe 白文件利用扫描器 版本 1.3 (2020 07 26)
 
 # 扫描支持：
 
-支持x86 x64程序、支持cui gui程序、支持定义扫描文件的最大大小、支持等待进程时间、支持选择只扫描带签名的PE程序、支持选择可与system目录dll同名。
+支持x86 x64程序、支持cui gui程序、支持定义扫描文件的最大大小、支持定义等待进程时间、支持选择只扫描带签名的PE程序、支持选择可与system目录dll同名。
 
 help : This tool scans files that could be used for hijacking.
 
