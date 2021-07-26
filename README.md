@@ -1,7 +1,7 @@
 # HijackScan
 白文件扫描器 非公开
 
-windows pe 白文件利用扫描器 版本 1.2 (2020 07 23)
+windows pe 白文件利用扫描器 版本 1.3 (2020 07 26)
 
 # 扫描支持：
 
@@ -15,21 +15,19 @@ windows pe 白文件利用扫描器 版本 1.2 (2020 07 23)
 
 支持选择只扫描带签名的PE程序
 
-扫描会带有system目录可以用dll项 （写死的）
+支持选择可与system目录dll同名
 
-[ -p c:\path ]  scan path.     
-
-[ -w win64   ]  w32 or w64.            
-
-[ -ui cui    ]  cui or gui.          
-
-[ -ms 100000 ]  file max size.      
-
-[ -wt 5000   ]  wait for process time. 
-
-[ -st        ]  file have signature.   
-
- * [ -sd        ]  system dir dll.     
+help : This tool scans files that could be used for hijacking.
+[ -p  ]	scan path                   :	[ ]D:\\scan                         
+[ -w  ]	scan software x86 or x64    :	[ ]w32      [*]w64      [ ]w32w64	
+[ -ui ]	scan software cui or gui    :	[ ]cui      [ ]gui      [*]cuigui 	
+[ -st ]	only scan signature         :	[ ]on       [*]off                  
+[ -sd ]	scan system dir dll         :	[*]on       [ ]off                  
+[ -ms ]	set scan file max size      :	[*]10   ( Mb )						
+[ -wt ]	set wait for proc time      :	[*]5000 ( ms )                      
+ [*] Stands for default.
+   For example : -p d:\\scan -w w64 -ui cuigui -st on -sd on -ms 10 -wt 5000  
+   version 1.3
 
 # 注意事项：
  1 扫描时会将符合条件的程序添加到列表最后统一检测是否可能利用
@@ -52,7 +50,7 @@ windows pe 白文件利用扫描器 版本 1.2 (2020 07 23)
 
  文件查询函数添加了更多判断，减少了无意义的尝试
  
- X64 增加申请内存创建新的线程执行shellcode创建注册表 （X32 需要读取文件到内存）
+ x64 增加申请内存创建新的线程执行shellcode创建注册表 （x86 需要读取文件到内存）
  
 ## v1.2
 
@@ -66,3 +64,14 @@ windows pe 白文件利用扫描器 版本 1.2 (2020 07 23)
 
  判断成功的条件增加，减少success文件夹中不能利用的程序
 
+## v1.3
+ 
+ x86 增加申请内存创建新的线程执行shellcode创建注册表
+ 
+ 整理项目依赖 直接生成 顺序relese x86 -> relese x64
+ 
+ 添加-sd 选项 支持选择是否可与system32目录下DLL重名
+ 
+ 修复得到的字符串中含有不可见字符导致程序创建资源文件失败的问题
+ 
+ 修复路径中含有../时导致结果与预期不符的问题
