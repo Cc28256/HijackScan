@@ -11,13 +11,15 @@ help : This tool scans files that could be used for hijacking.
 
 | 选项 | 说明                     | 参数                       | 默认   |
 | ---- | ------------------------ | -------------------------- | ------ |
-| -p   | scan path                | D:\\scan                   | X      |
+| -p   | scan path                | D:\\                       | ——     |
 | -w   | scan software x86 or x64 | “w32”、"w64" or "w32w64"   | w64    |
 | -ui  | scan software cui or gui | "cui"、"gui" or "cuigui"   | cuigui |
 | -st  | only scan signature      | “on” or ”off“              | off    |
 | -sd  | scan system dir dll      | "on" or "off"              | on     |
 | -ms  | set scan file max size   | ms < 100 ( Mb )            | 10     |
 | -wt  | set wait for proc time   | 4999 < wt < 1000000 ( ms ) | 5000   |
+
+
 
    For example : -p d:\\scan -w w64 -ui cuigui -st on -sd on -ms 10 -wt 5000  
    
