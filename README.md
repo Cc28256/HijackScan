@@ -68,4 +68,4 @@ help : This tool scans files that could be used for hijacking.
  
  修复得到的字符串中含有不可见字符导致程序创建资源文件失败的问题
  
- 修复路径中含有../时导致结果与预期不符的问题
+ 修复路径中含有“../”时导致结果与预期不符的问题
