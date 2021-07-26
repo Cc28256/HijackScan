@@ -9,19 +9,16 @@ windows pe 白文件利用扫描器 版本 1.3 (2020 07 26)
 
 help : This tool scans files that could be used for hijacking.
 
-| 选项     | 说明                     | 参数                                 |
-| -------- | ------------------------ | ------------------------------------ |
-| [ -p  ]  | scan path                | [ ] D:\\scan                         |
-| [ -w  ]  | scan software x86 or x64 | [ ] w32      [*] w64      [ ] w32w64 |
-| [ -ui ]  | scan software cui or gui | [ ] cui      [ ] gui      [*]cuigui  |
-| [ -st ]  | only scan signature      | [ ] on       [*] off                 |
-| [ -sd ]  | scan system dir dll      | [*] on       [ ] off                 |
-| [ -ms ]  | set scan file max size   | [*] ms < 100 ( Mb )                  |
-| [ -wt  ] | set wait for proc time   | [*] 5000< wt <1000000 ( ms )         |
+| 选项 | 说明                     | 参数                       | 默认   |
+| ---- | ------------------------ | -------------------------- | ------ |
+| -p   | scan path                | D:\\scan                   | X      |
+| -w   | scan software x86 or x64 | “w32”、"w64" or "w32w64"   | w64    |
+| -ui  | scan software cui or gui | "cui"、"gui" or "cuigui"   | cuigui |
+| -st  | only scan signature      | “on” or ”off“              | off    |
+| -sd  | scan system dir dll      | "on" or "off"              | on     |
+| -ms  | set scan file max size   | ms < 100 ( Mb )            | 10     |
+| -wt  | set wait for proc time   | 4999 < wt < 1000000 ( ms ) | 5000   |
 
-
- [*] Stands for default.
- 
    For example : -p d:\\scan -w w64 -ui cuigui -st on -sd on -ms 10 -wt 5000  
    
    version 1.3
