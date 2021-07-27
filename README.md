@@ -1,7 +1,7 @@
 # HijackScan
 白文件扫描器 非公开
 
-windows pe 白文件利用扫描器 版本 1.3 (2021 07 26)
+windows pe 白文件利用扫描器 版本 1.4 (2021 07 27)
 
 # 扫描支持：
 
@@ -17,7 +17,7 @@ help : This tool scans files that could be used for hijacking.
 | -st  | only scan signature      | “on” or ”off“              | off    |
 | -sd  | scan system dir dll      | "on" or "off"              | on     |
 | -ms  | set scan file max size   | ms < 100 ( Mb )            | 10     |
-| -wt  | set wait for proc time   | 4999 < wt < 1000000 ( ms ) | 5000   |
+| -wt  | set wait for proc time   | 4999 < wt < 1000001 ( ms ) | 5000   |
 
 
 
@@ -37,6 +37,16 @@ help : This tool scans files that could be used for hijacking.
  
 # 更新日志：
 
+## v1.4
+ 
+ shellcode删除了创建注册表动作，改为调试打印输出
+ 
+ 程序兼容性助手（Program Compatibility Assistant）弹窗不再需要手动关闭
+ 
+ windows features窗口（.NET Framework升级提示）不再需要手动关闭
+ 
+ 更改消息码来关闭消息窗口
+ 
 ## v1.3
  
  x86 增加申请内存创建新的线程执行shellcode创建注册表
