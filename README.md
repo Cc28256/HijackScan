@@ -23,7 +23,7 @@ help : This tool scans files that could be used for hijacking.
 
    For example : -p d:\\scan -w w64 -ui cuigui -st on -sd on -ms 10 -wt 5000  
    
-   version 1.3
+   version 1.4
 
 # 注意事项：
 
