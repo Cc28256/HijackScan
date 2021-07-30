@@ -1,7 +1,7 @@
 # HijackScan
 白文件扫描器 非公开
 
-windows pe 白文件利用扫描器 版本 1.5 (2021 07 28)
+windows pe 白文件利用扫描器 版本 1.6 (2021 07 30)
 
 # 扫描支持：
 
@@ -18,7 +18,7 @@ help : This tool scans files that could be used for hijacking.
 | -sd  | scan system dir dll      | "on" or "off"              | on     |
 | -ms  | set scan file max size   | ms < 100 ( Mb )            | 10     |
 | -wt  | set wait for proc time   | 4999 < wt < 1000001 ( ms ) | 5000   |
-
+| -s   | only scan no check file  | ——                         | ——     |
 
 
    For example : -p d:\\scan -w w64 -ui cuigui -st on -sd on -ms 10 -wt 5000  
@@ -37,8 +37,20 @@ help : This tool scans files that could be used for hijacking.
  
  5 程序执行时，创建的进程或其他进程弹窗UAC时，会造成无法关闭错误弹窗 因为他们不是一个会话或桌面 hscan 不能捕捉或没有权限 来关闭窗口
  
+ 6 尽管已经做出了尽可能的窗口判断、进程判断，避免影响计算机其他情况，但是可能仍然会有无法预计的情况，因此建议再计算机使用-s先收集，再将temp目录中收集到的文件放在虚拟机中进行非-s操作
+ 
 # 更新日志：
 
+## v1.5
+ 
+ 添加-s选项 只收集到temp目录 不进行下一步创建进程注入判断白文件步骤
+ 
+ 修改输出信息格式 添加扫描结果
+
+ 避免遗留子进程 结束进程所创建的子进程
+ 
+ 扫描时排出自身创建的success目录和temp目录 避免二次扫描
+ 
 ## v1.5
  
  修改输出信息格式 添加扫描结果
