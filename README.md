@@ -46,8 +46,6 @@ help : This tool scans files that could be used for hijacking.
 ## v1.6
  
  添加-s选项 只收集到temp目录 不进行下一步创建进程注入判断白文件步骤
- 
- 修改输出信息格式 添加扫描结果
 
  创建的进程如有调用创建管理员权限进程前，将被阻止，避免弹窗UAC
  
