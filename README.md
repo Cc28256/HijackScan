@@ -43,7 +43,7 @@ help : This tool scans files that could be used for hijacking.
  
 # 更新日志：
 
-## v1.5
+## v1.6
  
  添加-s选项 只收集到temp目录 不进行下一步创建进程注入判断白文件步骤
  
