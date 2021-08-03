@@ -67,6 +67,10 @@ help : This tool scans files that could be used for hijacking.
  
  扫描时排出自身创建的success目录和temp目录 避免二次扫描
  
+## v1.5 +
+ 
+ 修复 1.5 bug
+ 
 ## v1.5
  
  修改输出信息格式 添加扫描结果
