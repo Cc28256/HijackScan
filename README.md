@@ -41,7 +41,7 @@ help : This tool scans files that could be used for hijacking.
  
 # 更新日志：
 
-## v1.7+
+## v1.8
  
  尝试阻止注入程序调用SetSystemPowerState暂停或休眠
  
