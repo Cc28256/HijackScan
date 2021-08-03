@@ -1,7 +1,7 @@
 # HijackScan
 白文件扫描器 非公开
 
-windows pe 白文件利用扫描器 版本 1.7+ (2021 08 02)
+windows pe 白文件利用扫描器 版本 1.8 (2021 08 03)
 
 # 扫描支持：
 
@@ -41,6 +41,14 @@ help : This tool scans files that could be used for hijacking.
  
 # 更新日志：
 
+## v1.7+
+ 
+ 尝试阻止注入程序调用SetSystemPowerState暂停或休眠
+ 
+ 在创建劫持文件前，劫持进程在第一次freelibrary常见的系统DLL时进行WaitForSingleObject，增加劫持成功概率，尽可能获取更多的可利用程序
+ 
+ 更详细的打印输出
+ 
 ## v1.7+
  
  "应用程序错误"弹窗不再需要手动关闭
