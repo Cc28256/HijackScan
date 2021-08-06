@@ -21,7 +21,10 @@ help : This tool scans files that could be used for hijacking.
 | -s   | only scan no check file  | ——                         | ——     |
 
 
-   For example : -p d:\\scan -w w64 -ui cuigui -st on -sd on -ms 10 -wt 5000  
+   For example : HijackScan.exe -st on -p c:\test
+   
+  ![image](https://github.com/Cc28256/HijackScan/blob/main/hsacn_test.GIF)
+   
 
 # 注意事项：
 
