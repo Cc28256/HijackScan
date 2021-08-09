@@ -1,7 +1,9 @@
 # HijackScan
 白文件扫描器 非公开
 
-windows pe 白文件利用扫描器 版本 2.0 (2021 08 06)
+windows pe 白文件利用扫描器 版本 2.1 (2021 08 09)
+
+版本V2.1之后更新频率将不会频繁，因为已经累计扫描到过百白文件，短时间内不会再扫描测试来解决遇到的问题。
 
 # 扫描支持：
 
@@ -11,10 +13,10 @@ help : This tool scans files that could be used for hijacking.
 
 | 选项 | 说明                     | 参数                       | 默认   |
 | ---- | ------------------------ | -------------------------- | ------ |
-| -p   | scan path                | D:\\                       | ——     |
+| -p   | scan path user in or all | "user input D:\\" or "all" | ——     |
 | -w   | scan software x86 or x64 | “w32”、"w64" or "w32w64"   | w64    |
 | -ui  | scan software cui or gui | "cui"、"gui" or "cuigui"   | cuigui |
-| -st  | only scan signature      | “on” or ”off“              | off    |
+| -st  | only scan signature      | “on” or ”off“              | on     |
 | -sd  | scan system dir dll      | "on" or "off"              | on     |
 | -ms  | set scan file max size   | ms < 100 ( Mb )            | 10     |
 | -wt  | set wait for proc time   | 4999 < wt < 1000001 ( ms ) | 5000   |
@@ -44,8 +46,15 @@ help : This tool scans files that could be used for hijacking.
  
 # 更新日志：
 
+## v2.1 （2021 08 09）
 
-## v2.0
+ 新增路径参数-p all支持扫描所有盘符文件
+ 
+ 更准确的判断，为程序LoadLibrary的每一个符合条件DLL都创建单独的文件夹进行测试，不会像以前一样所有的dll放在一起进行测试，这样结果会更加准确，但是扫描时间会相对变得更久
+ 
+ 默认只扫描带数字签名的文件
+
+## v2.0 （2021 08 06）
 
  hijackdll第一次劫持永久等待改为等待12s 确保进程会被结束
  
