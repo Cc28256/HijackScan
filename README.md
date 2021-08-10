@@ -48,7 +48,7 @@ help : This tool scans files that could be used for hijacking.
  
 # 更新日志：
 
-## v2.1 （2021 08 10）
+## v2.2 （2021 08 10）
 
  同步X86
  
