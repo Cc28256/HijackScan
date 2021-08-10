@@ -23,7 +23,7 @@ help : This tool scans files that could be used for hijacking.
 | -s   | only scan no check file  | ——                         | ——     |
 
 
-   For example : HijackScan.exe -st on -p c:\test
+   For example : HijackScan.exe -p c:\test
    
   ![image](https://github.com/Cc28256/HijackScan/blob/main/hsacn_test.GIF)
    
