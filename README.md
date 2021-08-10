@@ -1,7 +1,7 @@
 # HijackScan
 白文件扫描器 非公开
 
-windows pe 白文件利用扫描器 版本 2.1 (2021 08 09)
+windows pe 白文件利用扫描器 版本 2.2 (2021 08 10)
 
 版本V2.1之后更新频率将不会频繁，因为已经累计扫描到过百白文件，短时间内不会再扫描测试来解决遇到的问题。
 
@@ -14,7 +14,7 @@ help : This tool scans files that could be used for hijacking.
 | 选项 | 说明                     | 参数                       | 默认   |
 | ---- | ------------------------ | -------------------------- | ------ |
 | -p   | scan path user in or all | "user input D:\\" or "all" | ——     |
-| -w   | scan software x86 or x64 | “w32”、"w64" or "w32w64"   | w64    |
+| -w   | scan software x86 or x64 | “w32”、"w64" or "w32w64"   | w32/64 |
 | -ui  | scan software cui or gui | "cui"、"gui" or "cuigui"   | cuigui |
 | -st  | only scan signature      | “on” or ”off“              | on     |
 | -sd  | scan system dir dll      | "on" or "off"              | on     |
@@ -43,8 +43,20 @@ help : This tool scans files that could be used for hijacking.
  6 尽管已经做出了尽可能的窗口判断、进程判断，避免影响程序执行对计算机产生的影响，但是可能仍然会有无法预计的情况，因此建议再计算机使用-s先收集，再将temp目录中收集到的文件放在纯净的虚拟机中进行非-s操作 , 这样做不仅主机不会受到影响，而且能从虚拟机的环境中验证不需要太多依赖的程序。
 
 7 程序在注入劫持阶段会遍历所有#32770类名、标题名除系统属性和空以外的窗口进行关闭，当有程序符合条件窗口可能会被关闭。
+
+8 由于注入平台不同的原因， X64的HScan只能测试x64程序，X86的HScan只能测试x86程序 （暂时的，未来可能会支持非相同平台注入）
  
 # 更新日志：
+
+## v2.1 （2021 08 09）
+
+ 同步X86
+ 
+ 阻止ShellExecuteExW程序测试
+ 
+ 阻止createprocess创建子进程
+ 
+ 
 
 ## v2.1 （2021 08 09）
 
@@ -53,6 +65,8 @@ help : This tool scans files that could be used for hijacking.
  更准确的判断，为程序LoadLibrary的每一个符合条件DLL都创建单独的文件夹进行测试，不会像以前一样所有的dll放在一起进行测试，这样结果会更加准确，但是扫描时间会相对变得更久
  
  默认只扫描带数字签名的文件
+ 
+ 默认-w参数跟随 hsacn 的平台，X86默认w32、 X64默认w64
 
 ## v2.0 （2021 08 06）
 
