@@ -25,7 +25,7 @@ help : This tool scans files that could be used for hijacking.
 
    For example : HijackScan.exe -p c:\test
    
-  ![image](https://github.com/Cc28256/HijackScan/blob/main/hsacn_test.GIF)
+  ![image](https://github.com/Cc28256/HijackScan/blob/main/hsacn.GIF)
    
 
 # 注意事项：
