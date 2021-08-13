@@ -1,7 +1,7 @@
 # HijackScan
 白文件扫描器 非公开
 
-windows pe 白文件利用扫描器 版本 2.2 (2021 08 10)
+windows pe 白文件利用扫描器 版本 2.3 (2021 08 13)
 
 版本V2.1之后更新频率将不会频繁，因为已经累计扫描到过百白文件，短时间内不会再扫描测试来解决遇到的问题。
 
@@ -44,9 +44,17 @@ help : This tool scans files that could be used for hijacking.
 
 7 程序在注入劫持阶段会遍历所有#32770类名、标题名除系统属性和空以外的窗口进行关闭，当有程序符合条件窗口可能会被关闭。
 
-8 由于注入平台不同的原因， X64的HScan只能测试x64程序，X86的HScan只能测试x86程序 （暂时的，未来可能会支持非相同平台注入）
+ ~~8 由于注入平台不同的原因， X64的HScan只能测试x64程序，X86的HScan只能测试x86程序 （暂时的，未来可能会支持非相同平台注入）~~
+ 
+ 8 X64的HScan只能测试x64程序，X86的HScan可以测试x86、x64程序（X86交叉注入目前仅在x64 windows 10上测试过，其他系统没有测试，稳定性未知）
  
 # 更新日志：
+
+## v2.3 （2021 08 13）
+
+ 添加交叉注入 现在x86的HScan可以将X64的hook.dll注入到X64的程序当中了,这意味着x86可以扫描x64和x86的白文件
+ 
+ 创建进程时将目标路径环境为参数传给CreateProess，修复判断程序自行组合的路径不再测试范围内。
 
 ## v2.2 （2021 08 10）
 
@@ -55,8 +63,6 @@ help : This tool scans files that could be used for hijacking.
  阻止ShellExecuteExW程序测试
  
  阻止createprocess创建子进程
- 
- 
 
 ## v2.1 （2021 08 09）
 
