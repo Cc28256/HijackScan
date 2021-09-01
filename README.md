@@ -46,7 +46,7 @@ help : This tool scans files that could be used for hijacking.
 
  ~~8 由于注入平台不同的原因， X64的HScan只能测试x64程序，X86的HScan只能测试x86程序 （暂时的，未来可能会支持非相同平台注入）~~
  
-  ~~8 X64的HScan只能测试x64程序，X86的HScan可以测试x86、x64程序（X86交叉注入目前仅在x64 windows 10上测试过，其他系统没有测试，稳定性未知） ~~
+ ~~8 X64的HScan只能测试x64程序，X86的HScan可以测试x86、x64程序（X86交叉注入目前仅在x64 windows 10上测试过，其他系统没有测试，稳定性未知）~~
  
 # 更新日志：
 
